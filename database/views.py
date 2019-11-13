@@ -60,13 +60,13 @@ def hero(request):
     book_heroinfo.objects.filter(id=req_data.id)
     return HttpResponse('ok')
 def select(request):
-    print(book_heroinfo.objects.filter(hgender=1))
-    print(book_heroinfo.objects.filter(hname__contains='黄'))
-    print(book_heroinfo.objects.filter(hbook_id__title='天龙八部'))
-    print(book_heroinfo.objects.filter(Q(id__lt=5) | Q(hgender=1)))
-    print(book_heroinfo.objects.filter(hgender=1).count())
-    print(book_bookinfo.objects.all())
-    print(book_bookinfo.objects.all()[1:5])
+    # print(book_heroinfo.objects.filter(hgender=1))
+    # print(book_heroinfo.objects.filter(hname__contains='黄'))
+    # print(book_heroinfo.objects.filter(hbook_id__title='天龙八部'))
+    # print(book_heroinfo.objects.filter(Q(id__lt=5) | Q(hgender=1)))
+    # print(book_heroinfo.objects.filter(hgender=1).count())
+    # print(book_bookinfo.objects.all())
+    # print(book_bookinfo.objects.all()[1:5])
     return JsonResponse({'1':[a.hname for a in book_heroinfo.objects.filter(hgender=1)],
                          '2':[a.hname for a in book_heroinfo.objects.filter(hname__contains='黄')],
                          '3':[a.hname for a in book_heroinfo.objects.filter(hbook_id__title='天龙八部')],
