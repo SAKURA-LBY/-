@@ -79,8 +79,7 @@ def select(request):
     # book = book_bookinfo.objects.filter(book_heroinfo__hname='沙悟净1')
 
     # book1 = book_bookinfo.objects.filter(book_heroinfo__hname='郭靖')
-jkhkjhkjhjhkhjkjh
-jlkjljklkj
+
     # dict =  {
     #
     # }
